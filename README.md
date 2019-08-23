@@ -10,3 +10,6 @@
 - [For Vue](https://isamu.github.io/FriendlyEats-vue/)
 - [For web](https://isamu.github.io/friendlyeats-web-docs/dist/)
 
+## Firebase startup kit
+
+- https://github.com/isamu/firebase-vue-startup-kit
