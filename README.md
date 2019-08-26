@@ -9,7 +9,7 @@
 - [React](https://github.com/isamu/FriendlyEats-React)
 - [Vue](https://github.com/isamu/FriendlyEats-vue)
 
-## Firebase FriendlyEats tutorials documents
+## Firebase FriendlyEats tutorials documents (日本語)
 
 - [For React](https://isamu.github.io/FriendlyEats-React/)
 - [For Vue](https://isamu.github.io/FriendlyEats-vue/)
