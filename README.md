@@ -1,5 +1,10 @@
 # isamu.github.io
 
+## Original codelabs link
+
+- [Google Codelabs](https://codelabs.developers.google.com/)
+- [Google Codelabs 日本語](https://codelabs.developers.google.com/lang-ja/)
+
 ## Firebase FriendlyEats tutorials
 - [React](https://github.com/isamu/FriendlyEats-React)
 - [Vue](https://github.com/isamu/FriendlyEats-vue)
@@ -12,4 +17,6 @@
 
 ## Firebase startup kit
 
-- https://github.com/isamu/firebase-vue-startup-kit
+- [Firebase startup kit (React version)](https://github.com/snakajima/firebase-startup-kit)
+- [Firebase Vue startup kit ](https://github.com/isamu/firebase-vue-startup-kit)
+
