@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isamu.github.io/lab/sitemap-index.xml
