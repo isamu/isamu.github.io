@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>isamu</title>
+<meta name="description" content="isamu のプロダクト、プロジェクト、記事、活動へのリンク集。">
+<link rel="canonical" href="https://isamu.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --border: #e7e5e4;
+    --text: #1c1917;
+    --muted: #78716c;
+    --accent: #4f46e5;
+    --accent-soft: #eef2ff;
+    --glow: rgba(79, 70, 229, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c0a09;
+      --surface: #1c1917;
+      --border: #292524;
+      --text: #f5f5f4;
+      --muted: #a8a29e;
+      --accent: #a5b4fc;
+      --accent-soft: #1e1b4b;
+      --glow: rgba(165, 180, 252, 0.10);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+  header.hero {
+    padding: 96px 0 56px;
+    background: radial-gradient(60% 80% at 20% 0%, var(--glow), transparent 70%);
+  }
+  .hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  .hero p { margin: 0; max-width: 40em; color: var(--muted); font-size: 1.05rem; }
+  nav.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  nav.jump a {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    transition: border-color .15s, color .15s;
+  }
+  nav.jump a:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding: 40px 0; }
+  .section-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .section-head h2 { margin: 0; font-size: 1.4rem; letter-spacing: -0.02em; }
+  .section-head span { color: var(--muted); font-size: 0.9rem; }
+
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: transform .15s, border-color .15s, box-shadow .15s;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px var(--glow);
+  }
+  .card .tag {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 10px;
+    border-radius: 999px;
+  }
+  .card h3 { margin: 4px 0 0; font-size: 1.1rem; display: flex; align-items: center; gap: 6px; }
+  .card h3::after { content: "↗"; font-size: 0.85em; color: var(--muted); transition: color .15s; }
+  .card:hover h3::after { color: var(--accent); }
+  .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+  .card .host { margin-top: auto; padding-top: 8px; font-size: 0.78rem; color: var(--muted); overflow-wrap: anywhere; }
+
+  .archive { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .archive div { padding: 20px 22px; border: 1px dashed var(--border); border-radius: 16px; }
+  .archive h3 { margin: 0 0 8px; font-size: 0.95rem; }
+  .archive ul { margin: 0; padding-left: 1.1em; font-size: 0.9rem; }
+  .archive li a { color: var(--muted); }
+  .archive li a:hover { color: var(--accent); }
+
+  footer { padding: 48px 0 64px; color: var(--muted); font-size: 0.85rem; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>isamu</h1>
+    <p>プロダクト、プロジェクト、記事、シンギュラリティ・ソサエティでの活動をまとめています。</p>
+    <nav class="jump">
+      <a href="#products">Products</a>
+      <a href="#projects">Projects</a>
+      <a href="#society">Singularity Society</a>
+      <a href="#writing">Writing</a>
+      <a href="#tutorials">Tutorials</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="products">
+    <div class="section-head"><h2>Products</h2><span>receptron</span></div>
+    <div class="grid">
+      <a class="card" href="https://mulmocast.com">
+        <span class="tag">Video &amp; Podcast</span>
+        <h3>MulmoCast</h3>
+        <p>台本を書くと、ナレーション付きの動画・ポッドキャスト・スライドを AI が生成します。CLI とデスクトップアプリ。</p>
+        <span class="host">mulmocast.com</span>
+      </a>
+      <a class="card" href="https://github.com/receptron/mulmoclaude">
+        <span class="tag">AI Assistant</span>
+        <h3>MulmoClaude</h3>
+        <p>自分のパソコンで育てる AI アシスタント。記憶もデータもアプリも手元のファイルに残り、会話に合わせて GUI が現れます。</p>
+        <span class="host">github.com/receptron/mulmoclaude</span>
+      </a>
+      <a class="card" href="https://www.mulmoterminal.com">
+        <span class="tag">Developer Tool</span>
+        <h3>MulmoTerminal</h3>
+        <p>Claude Code や Codex を並列で動かすブラウザ端末。どのエージェントが応答待ちかが一目でわかります。</p>
+        <span class="host">mulmoterminal.com</span>
+      </a>
+      <a class="card" href="https://graphai.info">
+        <span class="tag">Framework</span>
+        <h3>GraphAI / Grapys</h3>
+        <p>エージェントの処理をデータフローのグラフとして書く非同期実行エンジンと、ブラウザで組み立てる GUI。</p>
+        <span class="host">graphai.info</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head"><h2>Projects</h2></div>
+    <div class="grid">
+      <a class="card" href="https://isamu.github.io/lab/ja/">
+        <span class="tag">Linter</span>
+        <h3>chaff</h3>
+        <p>契約書・報告書などの文書から、長すぎる文や合わない合計、無い条項への参照など、機械で確かめられることを見つけます。</p>
+        <span class="host">isamu.github.io/lab</span>
+      </a>
+      <a class="card" href="https://github.com/isamu/ever-better">
+        <span class="tag">Code Quality</span>
+        <h3>ever-better</h3>
+        <p>既存のコードベースを「良くなる方向にしか動かない」状態にします。足りない品質ツールを入れ、今ある違反を上限として記録し、新しいコードには全ルールを課します。</p>
+        <span class="host">github.com/isamu/ever-better</span>
+      </a>
+      <a class="card" href="https://isamu.github.io/sori/">
+        <span class="tag">Data</span>
+        <h3>sori</h3>
+        <p>歴代総理の首相動静を、公務 1 時間 = 1 commit として GitHub の草に描きます。</p>
+        <span class="host">isamu.github.io/sori</span>
+      </a>
+      <a class="card" href="https://tax-answer.net/">
+        <span class="tag">Simulator</span>
+        <h3>Tax Answer</h3>
+        <p>年収から所得税・住民税・社会保険料のおおよその額を計算し、グラフで見せます。</p>
+        <span class="host">tax-answer.net</span>
+      </a>
+      <a class="card" href="https://omochikaeri.com">
+        <span class="tag">Service</span>
+        <h3>おもちかえり.com</h3>
+        <p>飲食店のテイクアウト注文サービス。</p>
+        <span class="host">omochikaeri.com</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="society">
+    <div class="section-head"><h2>Singularity Society</h2><span>一般社団法人シンギュラリティ・ソサエティ</span></div>
+    <div class="grid">
+      <a class="card" href="https://singularitysociety.org/">
+        <span class="tag">Website</span>
+        <h3>公式サイト</h3>
+        <p>シンギュラリティ・ソサエティの活動と最新情報。</p>
+        <span class="host">singularitysociety.org</span>
+      </a>
+      <a class="card" href="https://singularitysociety.github.io/societys_statement/">
+        <span class="tag">Statement</span>
+        <h3>Society's Statement</h3>
+        <p>ソサエティの考え方と方針をまとめたドキュメント。</p>
+        <span class="host">singularitysociety.github.io</span>
+      </a>
+      <a class="card" href="https://singularitysociety.github.io/societys_statement/development/README.html">
+        <span class="tag">Developer Docs</span>
+        <h3>開発の心得</h3>
+        <p>開発者向けドキュメント。Git、Vibe Coding、AI フレンドリーな設計、Twitter / ChatGPT クローン、CLI エージェントを作りながら学ぶ入門など。</p>
+        <span class="host">singularitysociety.github.io</span>
+      </a>
+      <a class="card" href="https://singularitysociety.org/activities/bootcamp/">
+        <span class="tag">Education</span>
+        <h3>Bootcamp</h3>
+        <p>手を動かしてプロダクトを作るブートキャンプ。</p>
+        <span class="host">singularitysociety.org</span>
+      </a>
+      <a class="card" href="https://singularitysociety.github.io/security-education/">
+        <span class="tag">Security</span>
+        <h3>セキュリティ教育</h3>
+        <p>Web アプリのセキュリティを学ぶための教材。</p>
+        <span class="host">singularitysociety.github.io</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="section-head"><h2>Writing</h2></div>
+    <div class="grid">
+      <a class="card" href="https://zenn.dev/singularity">
+        <span class="tag">Zenn</span>
+        <h3>Zenn の記事</h3>
+        <p>開発ツール、AI エージェント、実装の知見についての技術記事。</p>
+        <span class="host">zenn.dev/singularity</span>
+      </a>
+      <a class="card" href="https://note.com/singsoc">
+        <span class="tag">note</span>
+        <h3>note の記事</h3>
+        <p>シンギュラリティ・ソサエティからの発信。</p>
+        <span class="host">note.com/singsoc</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="tutorials">
+    <div class="section-head"><h2>Tutorials</h2><span>Firebase / Codelabs</span></div>
+    <div class="archive">
+      <div>
+        <h3>Codelabs</h3>
+        <ul>
+          <li><a href="https://codelabs.developers.google.com/">Google Codelabs</a></li>
+          <li><a href="https://codelabs.developers.google.com/lang-ja/">Google Codelabs 日本語</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>FriendlyEats tutorials</h3>
+        <ul>
+          <li><a href="https://github.com/isamu/FriendlyEats-React">React</a> · <a href="https://isamu.github.io/FriendlyEats-React/">docs</a></li>
+          <li><a href="https://github.com/isamu/FriendlyEats-vue">Vue</a> · <a href="https://isamu.github.io/FriendlyEats-vue/">docs</a></li>
+          <li><a href="https://github.com/isamu/FriendlyEats-vue3">Vue3</a> · <a href="https://isamu.github.io/FriendlyEats-vue3/">docs</a></li>
+          <li><a href="https://isamu.github.io/friendlyeats-web-docs/dist/">For web (docs)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Firebase startup kit</h3>
+        <ul>
+          <li><a href="https://github.com/snakajima/firebase-startup-kit">React version</a></li>
+          <li><a href="https://github.com/isamu/firebase-vue-startup-kit">Vue</a></li>
+          <li><a href="https://github.com/isamu/firebase-vue3-startup-kit">Vue3</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="https://github.com/isamu">github.com/isamu</a>
+  </div>
+</footer>
+
+</body>
+</html>
